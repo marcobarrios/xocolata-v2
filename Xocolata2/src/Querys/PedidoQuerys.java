@@ -6,7 +6,7 @@
 
 package Querys;
 
-import Clases.Pedido;
+import Clases.Pedidos;
 import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -21,7 +21,7 @@ import xocolata2.ConexionDB;
  */
 public class PedidoQuerys {
     
-    public static void insertarPedido(Pedido pedido) {
+    public static void insertarPedido(Pedidos pedido) {
         Connection conexion = ConexionDB.ObtenerConexion();
         try
         {

@@ -10,26 +10,12 @@ package Clases;
  *
  * @author Marco
  */
-public class Vendedor {
-    private String codigo = "";
+public class Clientes {
     private String nombre = "";
     private String dpi = "";
     private String direccion = "";
+    private String telefono = "";
     private double saldo = 0.0;
-
-    /**
-     * @return the codigo
-     */
-    public String getCodigo() {
-        return codigo;
-    }
-
-    /**
-     * @param codigo the codigo to set
-     */
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
 
     /**
      * @return the nombre
@@ -71,6 +57,20 @@ public class Vendedor {
      */
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    /**
+     * @return the telefono
+     */
+    public String getTelefono() {
+        return telefono;
+    }
+
+    /**
+     * @param telefono the telefono to set
+     */
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     /**

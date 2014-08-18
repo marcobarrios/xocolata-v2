@@ -6,7 +6,7 @@
 
 package Querys;
 
-import Clases.Producto;
+import Clases.Productos;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -22,7 +22,7 @@ import xocolata2.ConexionDB;
  */
 public class ProductoQuerys {
     
-    public static void insertarProducto(Producto producto)
+    public static void insertarProducto(Productos producto)
     {
         try {
             Connection conexion = ConexionDB.ObtenerConexion();
