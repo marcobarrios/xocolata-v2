@@ -8,6 +8,7 @@ package Vistas;
 
 import Clases.Pedidos;
 import Clases.Productos;
+import Querys.PedidoQuerys;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.Calendar;
@@ -50,7 +51,8 @@ public class IngresoPedidoController implements Initializable {
     @FXML
     private void bAceptarAction(ActionEvent event) {
         ///Acción de boton Aceptar
-        ///Implementar Ingreso de pedido
+        PedidoQuerys.insertarPedido(crearPedido());
+        limpiarCampos();
         System.out.println("Boton Aceptar");
     }
 
@@ -68,8 +70,7 @@ public class IngresoPedidoController implements Initializable {
         return okClicked;
     }
     
-    private Pedidos crearPedido()
-    {
+    private Pedidos crearPedido() {
         DecimalFormat formato = new DecimalFormat("0.00");
         Pedidos pedido = new Pedidos();
         
@@ -77,8 +78,28 @@ public class IngresoPedidoController implements Initializable {
         pedido.setFecha(fechac);
         pedido.setSubtotal(Double.parseDouble(formato.format(((Double.parseDouble(tSubtotal.getText()))))));
         pedido.setImpuesto(Double.parseDouble(formato.format(((Double.parseDouble(tImpuesto.getText()))))));
-        ///seguir implementando
+        pedido.setEnvioUSA(Double.parseDouble(formato.format(((Double.parseDouble(tEnvioEEUU.getText()))))));
+        pedido.setCantidadProductos(Integer.parseInt((tCantidadProductos.getText())));
+        pedido.setEnvioGTUnitario(Double.parseDouble(formato.format(((Double.parseDouble(tEnvioEEUUaGT.getText()))))));
+        pedido.setTipoCambio(Double.parseDouble(formato.format(((Double.parseDouble(tTipoCambio.getText()))))));
+        
+        pedido.setImpuestoUnitario(Double.parseDouble(formato.format(Double.parseDouble(tImpuesto.getText())*100 /(Double.parseDouble(tSubtotal.getText())))));
+        pedido.setEnvioUSAUnitario(Double.parseDouble(formato.format(Double.parseDouble(tEnvioEEUU.getText())/ (Double.parseDouble(tCantidadProductos.getText())))));
+
         return pedido;
+    }
+    
+    public void limpiarCampos() {
+        tCodigoPedido.setText("");
+        tSubtotal.setText("");
+        tImpuesto.setText("");
+        tEnvioEEUU.setText("");
+        tTotalDolares.setText("");
+        tCantidadProductos.setText("");
+        tTipoCambio.setText("");
+        tEnvioEEUUaGT.setText("");
+        
+        tCodigoPedido.requestFocus();
     }
     
     /**
