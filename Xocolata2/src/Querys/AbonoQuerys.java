@@ -32,6 +32,7 @@ public class AbonoQuerys {
             JOptionPane.showMessageDialog(null, "Abono cargado correctamente", "Abono Exitoso", 1);
             comando.close();
             conexion.close();
+            actualizarSaldoVendedor(abono.getMontoAbono(), abono.getIdPersona());
         }
         catch (HeadlessException ex)
         {
@@ -39,7 +40,7 @@ public class AbonoQuerys {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage());
         }
-        actualizarSaldoVendedor(abono.getMontoAbono() ,abono.getIdPersona());
+        
     }
     
     public static void actualizarSaldoVendedor(Double abono, int idPersona)
@@ -79,6 +80,7 @@ public class AbonoQuerys {
             JOptionPane.showMessageDialog(null, "Abono cargado correctamente", "Abono Exitoso", 1);
             comando.close();
             conexion.close();
+            actualizarSaldoCliente(abono.getMontoAbono(), abono.getIdPersona());
         }
         catch (HeadlessException ex)
         {
@@ -86,7 +88,7 @@ public class AbonoQuerys {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage());
         }
-        actualizarSaldoCliente(abono.getMontoAbono() ,abono.getIdPersona());
+        
     }
     
     public static void actualizarSaldoCliente(Double abono, int idPersona)
