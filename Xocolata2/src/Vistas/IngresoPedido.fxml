@@ -29,17 +29,17 @@
             <Label text="Impuesto $" GridPane.rowIndex="2" />
             <Label text="Envio en EEUU $" GridPane.rowIndex="3" />
             <Label text="Total en $" GridPane.rowIndex="4" />
+            <Label text="Cantidad de Productos" GridPane.rowIndex="5" />
             <Label text="Envio EEUU a Guatemala $" GridPane.rowIndex="6" />
             <Label text="Tipo cambio Q." GridPane.rowIndex="7" />
-            <TextField fx:id="tCodigoPedido" GridPane.columnIndex="1" />
-            <TextField fx:id="tSubtotal" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="tImpuesto" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="tEnvioEEUU" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="tTotalDolares" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField fx:id="tEnvioEEUU" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField fx:id="tTipoCambio" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <Label text="Cantidad de Productos" GridPane.rowIndex="5" />
-            <TextField fx:id="tCantidadProductos" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="tCodigoPedido" alignment="CENTER" GridPane.columnIndex="1" />
+            <TextField fx:id="tSubtotal" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tImpuesto" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="tEnvioEEUU" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="tTotalDolares" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="tCantidadProductos" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="tEnvioEEUUaGT" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="tTipoCambio" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="7" />
          </children>
       </GridPane>
       <Button layoutX="223.0" layoutY="359.0" mnemonicParsing="false" onAction="#bAceptarAction" text="Aceptar" />

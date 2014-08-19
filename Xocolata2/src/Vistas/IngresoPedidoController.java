@@ -37,6 +37,8 @@ public class IngresoPedidoController implements Initializable {
     @FXML
     private TextField tTotalDolares;
     @FXML
+    private TextField tEnvioEEUUaGT;
+    @FXML
     private TextField tTipoCambio;
     @FXML
     private TextField tCantidadProductos;

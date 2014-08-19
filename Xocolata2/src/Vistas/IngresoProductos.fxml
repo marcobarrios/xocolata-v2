@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Vistas.IngresoProductosController">
+   <children>
+      <TableView layoutX="14.0" layoutY="46.0" prefHeight="96.0" prefWidth="373.0" />
+      <Label layoutX="315.0" layoutY="14.0" text="Ingreso de Productos">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView layoutX="405.0" layoutY="46.0" prefHeight="426.0" prefWidth="379.0" />
+   </children>
+</AnchorPane>
